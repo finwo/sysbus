@@ -4,12 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild src/client.js --bundle --outfile=public/client.js",
+    "dev": "npm run build; node index.js"
   },
   "repository": {
     "type": "git",
     "url": "/home/finwo/git/finwo/sysbus"
   },
   "author": "Robin Bron <finwo@pm.me>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cws": "^1.2.15",
+    "esbuild": "^0.12.6",
+    "node-static": "^0.7.11",
+    "rc": "^1.2.8"
+  }
 }
